@@ -12,11 +12,4 @@ def string_sort ( list ):
         new_list.append(list[i].lower())
         list = new_list
 
-    for i in range (1,len(list)):
-        j = i
-        while ( j > 0 and list [j - 1] > list[i] ):
-            list[j] = list[j-1]
-        j -= 1
-        list[j] = list[i]
-        return list
 
