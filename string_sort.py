@@ -5,20 +5,18 @@
 # Name this function string_sort. The resulting list should contain the exact same strings as the original list, but in sorted order.
 
 
-def string_sort ( l ):
+def string_sort ( list ):
     """sort a list of strings"""
-    list1 = []
-    for i in range(len(l)):
-        list1.append(l[i].lower())
-        l = list1
+    new_list = []
+    for i in range(len(list)):
+        new_list.append(list[i].lower())
+        list = new_list
 
-    for i in range (1,len(l)):
-        key = l[i]
+    for i in range (1,len(list)):
         j = i
-
-    while ( j > 0 and l [j - 1] > key ):
-        l[j] = l[j-1]
+        while ( j > 0 and list [j - 1] > list[i] ):
+            list[j] = list[j-1]
         j -= 1
-        l[j] = key
-        return l
+        list[j] = list[i]
+        return list
 
